@@ -139,7 +139,7 @@ Reset Default CSS End
   margin: 0;
   font-size: 20px;
   font-weight: 500;
-  color: var(--gray-text);
+  color: #1B2A32;
   font-family: var(--secendary-font);
 }
 
@@ -204,3 +204,288 @@ Reset Default CSS End
 }
 
 /* Navbar Header End */
+/* 
+:root {
+  --nav-height: 50px;
+  --nav-link-height: 16px;
+  --nav-background: #005;
+  --nav-font-color: #FFF;
+  --link-hover-color: #28D;
+} */
+
+/* Logo + navigation bar, full width */
+.navigation {
+  height: var(--nav-height);
+  background: var(--nav-background);
+}
+
+/* Logo + navigation bar, restricted width */
+.nav_item {}
+
+/* Logo */
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: var(--nav-height);
+  font-size: 1.4em;
+  width: 200px;
+}
+.brand:hover {
+  background: var(--link-hover-color);
+  color: var(--nav-font-color);
+}
+.brand a,
+.brand a:visited {
+  color: var(--nav-font-color);
+  text-decoration: none;
+}
+
+/* Navigation bar */
+nav {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: var(--nav-height) 0 15px;
+}
+nav .active {
+  display: block;
+}
+/* 1st level */
+nav > ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav > ul > li {
+  float: none;
+  position: relative;
+}
+nav > ul > li a,
+nav > ul > li a:visited {
+  display: block;
+  padding: 15px;
+  line-height: var(--nav-link-height);
+  background: var(--gray-text);
+  color: var(--nav-font-color);
+  text-decoration: none;
+}
+nav > ul > li a:hover,
+nav > ul > li a:visited:hover {
+  background: var(--link-hover-color);
+  color: var(--nav-font-color);
+}
+nav > ul > li a:not(:only-child):after,
+nav > ul > li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: '\25BC';
+}
+/* 2nd level */
+nav > ul > li > ul {
+  position: static;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+nav > ul > li > ul > li {
+  min-width: 190px;
+}
+nav > ul > li > ul > li a {
+  padding: 15px 15px 15px 30px;
+  line-height: var(--nav-link-height);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: var(--gray-text);
+  height: var(--nav-height);
+  width: var(--nav-height);
+}
+#nav-ham {
+  position: absolute;
+  left: 8px;
+  top: 14px;
+  cursor: pointer;
+  padding: 10px 35px 10px 0px;
+}
+#nav-ham span,
+#nav-ham span:before,
+#nav-ham span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: var(--nav-font-color);
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-ham span:before {
+  top: -10px;
+}
+#nav-ham span:after {
+  bottom: -10px;
+}
+#nav-ham.active span {
+  background-color: transparent;
+}
+#nav-ham.active span:before,
+#nav-ham.active span:after {
+  top: 0;
+}
+#nav-ham.active span:before {
+  transform: rotate(45deg);
+}
+#nav-ham.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 799px) {
+  nav {
+    float: right;
+    width: auto;
+    padding: 0;
+  }
+  /* 1st level */
+  nav > ul {
+    display: block !important;
+  }
+  nav > ul > li {
+    float: left;
+  }
+  
+  /* 2nd level */
+  nav > ul > li > ul {
+    position: absolute;
+    display: none;
+  }
+  nav > ul > li > ul > li a {
+    padding: 15px;
+  }
+  .nav-mobile {
+    display: none;
+  }
+}
+
+
+
+/* Footer Start */
+#footer {
+  background: #191919;
+}
+
+.lawfirm_footer {
+  padding: 40px 0;
+}
+
+.footer_item h1 {
+  color: var(--white);
+  font-family: var(--primary-font);
+  font-size: 22px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.footer_item ul li a {
+  color: var(--white);
+  font-family: var(--secendary-font);
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.4s;
+}
+
+.footer_item ul li a:hover {
+  color: var(--secendary-color);
+}
+
+.footer_item ul li {
+  margin-bottom: 10px;
+}
+
+.footer_item ul .footer_image {
+  max-width: 300px;
+  margin-top: 15px;
+}
+
+.payment_mathode {
+  width: 350px;
+}
+
+.payment_mathode img {
+  width: 100%;
+}
+
+.copyright {
+  background: var(--bg-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.copyright .footer_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright p {
+  font-size: 18px;
+  font-family: var(--secondary-font);
+  color: var(--white);
+  font-weight: normal;
+  margin: 0px;
+}
+
+.copyright span {
+  font-size: 18px;
+  font-family: var(--secendary-font);
+  color: var(--white);
+  font-weight: normal;
+}
+.footer_social_link .link_item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer_social_link .link_item a:hover {
+  background: var(--white);
+}
+
+.footer_social_link .link_item a:hover i {
+  color: var(--primary-color) !important;
+}
+
+.footer_social_link .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  transition: 0.4s;
+}
+
+.footer_item .footer_social_link i {
+  color: var(--white) !important;
+}
+
+@media screen and (max-width: 992px) {
+  #footer .footer_item {
+    margin-top: 20px;
+  }
+}
+/* Footer End */
+

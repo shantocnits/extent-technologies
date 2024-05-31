@@ -1,39 +1,61 @@
-// // search-box open close js code
-// let navbar = document.querySelector(".navbar");
-// let searchBox = document.querySelector(".search-box .bx-search");
-// // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+// After the DOM is loaded
+window.addEventListener("load", function(e) {
 
-// searchBox.addEventListener("click", ()=>{
-//   navbar.classList.toggle("showInput");
-//   if(navbar.classList.contains("showInput")){
-//     searchBox.classList.replace("bx-search" ,"bx-x");
-//   }else {
-//     searchBox.classList.replace("bx-x" ,"bx-search");
-//   }
-// });
-
-// // sidebar open close js code
-// let navLinks = document.querySelector(".nav-links");
-// let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-// let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-// menuOpenBtn.onclick = function() {
-// navLinks.style.left = "0";
-// }
-// menuCloseBtn.onclick = function() {
-// navLinks.style.left = "-100%";
-// }
-
-
-// // sidebar submenu open close js code
-// let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-// htmlcssArrow.onclick = function() {
-//  navLinks.classList.toggle("show1");
-// }
-// let moreArrow = document.querySelector(".more-arrow");
-// moreArrow.onclick = function() {
-//  navLinks.classList.toggle("show2");
-// }
-// let jsArrow = document.querySelector(".js-arrow");
-// jsArrow.onclick = function() {
-//  navLinks.classList.toggle("show3");
-// }
+    // Hamburger or X
+    let navham = document.getElementById('nav-ham');
+    // 1st level (only one)
+    let navul = document.querySelector('nav > ul');
+    // 2nd level (many)
+    let navulliuls = document.querySelectorAll('nav > ul > li > ul');
+    // 1st level links that have a 2nd level dropdown (many)
+    let navullis = document.querySelectorAll('nav > ul > li a:not(:only-child)');
+    
+    // Toggle 2nd level visibility
+    let toggle2nd = function(e) {
+      // Make 2nd level visible
+      let thisul = this.parentNode.querySelector('ul');
+      thisul.classList.toggle('active');
+      // Hide other dropdowns
+      for (let item of navulliuls) {
+        if (item !== thisul) {
+          item.classList.remove('active');
+        }
+      }
+      // Do not execute this link or hidenav
+      e.stopPropagation();
+    }
+    
+    // Toggle mobile navigation bar
+    let togglenav = function(e) {
+      // Hamburger to X toggle
+      navham.classList.toggle('active');
+      // 1st level visible toggle
+      navul.classList.toggle('active');
+      // Do not execute hidenav
+      e.stopPropagation();
+    }
+    
+    // Hide mobile navigation bar
+    let hidenav = function(e) {
+      // Hamburger
+      navham.classList.remove('active');
+      // 1st level visible toggle
+      navul.classList.remove('active');
+      e.stopPropagation();
+      // Hide 2nd level
+      for (let item of navulliuls) {
+        item.classList.remove('active');
+      }
+    }
+    
+    // Toggle 2nd level visibility on click on any link that has a 2nd level dropdown
+    for (let item of navullis) {
+      item.addEventListener("click", toggle2nd, false);
+    }
+    
+    // Hamburger or X click
+    navham.addEventListener("click", togglenav, false);
+    
+    // Clicking away from dropdown will remove the dropdown class
+    document.documentElement.addEventListener("click", hidenav, false);
+  }, false);

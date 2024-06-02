@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*====================
+Reset Default CSS Start
+====================*/
+
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secendary-font: "Roboto", sans-serif;
+  --white: #ffffff;
+  --primary-color: #1b2a32;
+  --secendary-color: #0266e0;
+  --strock-color: #7c7c7c;
+  --gray-text: #7c7c7c;
+  --bg-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+p {
+  margin: 0px;
+}
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  font-family: var(--secendary-font);
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: var(--secendary-font);
+}
+
+input {
+  outline: none;
+}
+
+/*====================
+Reset Default CSS End
+====================*/
+
+/* Explore Our Services Start */
+
+.services-service-sec {
+  background-color: var(--white);
+}
+
+.services-service-sec h2 {
+  font-size: 28px;
+  color: var(--bg-color);
+  font-family: var(--primary-font);
+  font-weight: bold;
+}
+
+.services-service-sec .col {
+  padding: 0 0.8em 1.5em 0.8em;
+  text-align: center;
+}
+
+.services-service-sec .service-card {
+  width: 100%;
+  height: 100%;
+  padding: 1em 1em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid #dddddd;
+}
+
+.services-service-sec .service-card:hover {
+  background: var(--secendary-color);
+}
+
+.services-service-sec .service-card:hover .read-more-btn,
+.services-service-sec .service-card:hover h3,
+.services-service-sec .service-card:hover p {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.services-service-sec .service-card:hover .read-more-btn:hover {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--bg-color);
+}
+
+.services-service-sec h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bg-color);
+  margin: 1em 0;
+  z-index: 3;
+}
+
+.services-service-sec p {
+  color: var(--gray-text);
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  z-index: 3;
+}
+
+.services-service-sec .icon-wrapper {
+  position: relative;
+  margin: auto;
+}
+
+.service-card .icon-wrapper {
+  width: 70px;
+  height: 70px;
+}
+
+.service-card .icon-wrapper img {
+  width: 100%;
+}
+
+.service-card .read-more-btn {
+  display: inline-block;
+  background: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--secendary-font);
+  transition: 0.4s;
+}
+
+/* Explore Our Services End */
+
+/* Our Products Start */
+#our_product {
+  padding: 48px 0;
+  background: var(--white);
+}
+
+.product_heading h2 {
+  color: var(--bg-color);
+  font-family: var(--primary-font);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.view_more_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view_more_wrapper .server {
+  font-family: var(--primary-font);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--secendary-color);
+  margin: 0;
+  border-bottom: 1px solid var(--secendary-color);
+}
+
+.view_more_btn {
+  display: inline-block;
+  color: var(--bg-color);
+  border-radius: 5px;
+  background: none;
+  font-size: 12px;
+  font-family: var(--secendary-font);
+  font-weight: 400;
+  padding: 6px 12px;
+  border: 1px solid var(--primary-color);
+  transition: 0.4s;
+}
+
+.view_more_btn:hover {
+  background: var(--bg-color);
+  color: var(--white);
+}
+
+.product_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_card_item {
+  width: 100%;
+  padding: 18px;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+}
+
+.product_img img {
+  width: 140px;
+  height: 140px;
+}
+
+.product_card_details {
+  text-align: center;
+}
+
+.product_card_details .brand_name {
+  font-size: 14px;
+  color: var(--gray-text);
+  font-family: var(--secendary-font);
+  font-weight: 500;
+}
+
+.product_card_details .model {
+  font-size: 14px;
+  color: var(--bg-color);
+  font-family: var(--primary-font);
+  font-weight: 600;
+}
+
+.product_card_details .rating_star .fa-star {
+  font-size: 14px;
+  color: #fdc904;
+}
+
+.product_card_details .current_price h3 {
+  font-size: 14px;
+  color: var(--gray-text);
+  text-decoration: line-through;
+  font-family: var(--primary-font);
+}
+
+.product_card_details .discount_price h4 {
+  font-size: 16px;
+  color: var(--secendary-color);
+  font-family: var(--primary-font);
+}
+
+.product_cart_btn {
+  width: 100%;
+  background: var(--secendary-color);
+  color: var(--white);
+  padding: 6px 0;
+  text-align: center;
+  font-size: 12px;
+  font-family: var(--secendary-font);
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.product_cart_btn:hover {
+  background: var(--bg-color);
+}
+
+/* Our Products End */
+
+
+/* Troubleshooting contact Start */
+
+#troubleshooting_contact {
+  width: 100%;
+  background-image: url(../img/troubleshooting-contact-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0;
+}
+
+.trouble_wrapper {
+  text-align: center;
+}
+
+.trouble_wrapper h1 {
+  font-size: 32px;
+  font-family: var(--primary-font);
+  color: var(--bg-color);
+  font-weight: 600;
+}
+
+.trouble_wrapper p {
+  display: block;
+  margin: auto;
+  justify-content: center;
+  max-width: 490px;
+  text-align: center;
+  font-size: 12px;
+  font-family: var(--secendary-font);
+  color: var(--white);
+  font-weight: normal;
+}
+
+.troubleshoot_contact_btn {
+  background: var(--white);
+  font-size: 14px;
+  font-family: var(--secendary-font);
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+/* Troubleshooting contact En */

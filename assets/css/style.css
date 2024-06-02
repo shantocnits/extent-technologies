@@ -71,7 +71,7 @@ Reset Default CSS End
 }
 
 .topbar_item_text span {
-  font-weight: 600;
+  font-weight: 700 !important;
 }
 
 .currency_dropdown .currency_btn {
@@ -91,6 +91,50 @@ Reset Default CSS End
 
 .currency_dropdown .dropdown-menu .dropdown-item {
   border-radius: 6px;
+}
+
+.output {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  color: white;
+}
+
+/* Cursor Styling */
+.cursor {
+  font-family: var(--secendary-font);
+  margin-bottom: 0px !important;
+  font-size: 1em !important;
+}
+.cursor::after {
+  content: "";
+  display: inline-block;
+  margin-left: 3px;
+  background-color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.cursor::after {
+  height: 8px;
+  width: 4px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {

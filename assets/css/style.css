@@ -542,7 +542,6 @@ p.cursor::after {
     position: relative;
     font-size: 14px;
     padding-left: 16px;
-    transition: 0.4s;
   }
 
   .navbar .menu ul li a:hover span::after {
@@ -564,7 +563,7 @@ p.cursor::after {
   .navbar .menu ul li a {
     color: var(--white);
     font-size: 16px;
-    transition: 0s;
+    transition: 0.5s;
   }
 
   .navbar .menu .close-menu-btn {
@@ -827,6 +826,10 @@ p.cursor::after {
 }
 
 @media screen and (max-width: 992px) {
+  .footer_item {
+    margin: 20px 0;
+  }
+
   .copyright_wrapper {
     display: block;
   }

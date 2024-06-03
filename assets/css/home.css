@@ -51,6 +51,25 @@ input {
 Reset Default CSS End
 ====================*/
 
+/* Hero Start */
+
+#hero .hero_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero_wrapper .category_sidebar {
+  width: 30%;
+}
+
+.hero_wrapper .hero_slider {
+  width: 70%;
+}
+
+/* Hero End */
+
 /* Explore Our Services Start */
 
 .services-service-sec {
@@ -154,6 +173,7 @@ Reset Default CSS End
   font-family: var(--primary-font);
   font-size: 32px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .view_more_wrapper {
@@ -179,7 +199,7 @@ Reset Default CSS End
   font-size: 12px;
   font-family: var(--secendary-font);
   font-weight: 400;
-  padding: 6px 12px;
+  padding: 5px 14px;
   border: 1px solid var(--primary-color);
   transition: 0.4s;
 }
@@ -193,13 +213,24 @@ Reset Default CSS End
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 0;
+}
+
+.product_card {
+  padding: 14px 0;
 }
 
 .product_card_item {
+  position: relative;
   width: 100%;
   padding: 18px;
   border-radius: 6px;
   border: 1px solid #dddddd;
+  transition: 0.4s;
+}
+
+.product_card_item:hover {
+  border-color: var(--secendary-color);
 }
 
 .product_img img {
@@ -228,6 +259,7 @@ Reset Default CSS End
 .product_card_details .rating_star .fa-star {
   font-size: 14px;
   color: #fdc904;
+  margin-bottom: 10px;
 }
 
 .product_card_details .current_price h3 {
@@ -244,7 +276,14 @@ Reset Default CSS End
 }
 
 .product_cart_btn {
-  width: 100%;
+  display: block;
+  margin: auto;
+  bottom: 20px;
+  left: 0px;
+  right: 0px;
+  width: calc(100% - 40px);
+  margin-top: 50px !important;
+  position: absolute;
   background: var(--secendary-color);
   color: var(--white);
   padding: 6px 0;
@@ -259,7 +298,147 @@ Reset Default CSS End
   background: var(--bg-color);
 }
 
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #DDDDDD;
+  margin: 20px 0px 25px 0px;
+}
+
+.box_wrapper {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width:992px) {
+
+  .product_card_item {
+    margin: 10px 0;
+  }
+  
+}
+
 /* Our Products End */
+
+
+/* Our Client Slider Start */
+
+.owl-slider {
+  margin: 0 100px;
+}
+
+.owl-slider-heading h1 {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: var(--primary-font);
+  color: var(--bg-color);
+  text-align: center;
+  margin-bottom: 40px;
+
+}
+
+#our_client {
+  margin: 48px 0;
+
+}
+#our_client .owl-nav button {
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+#our_client .owl-nav button.owl-prev {
+  display: none !important;
+}
+#our_client .owl-nav button.owl-next {
+  display: none !important;
+}
+
+.owl-stage {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-left: 2px;
+}
+
+.owl-carousel .item {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  height: 100px;
+  padding: 30px;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+  transition: 0.4s;
+}
+
+.owl-carousel .item:hover {
+  border-color: var(--secendary-color);
+}
+
+.owl-carousel .item img {
+  width: 100%;
+  background-size: cover;
+}
+
+.owl-dots {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.owl-dots button.owl-dot {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  background: #DDDDDD !important;
+  margin: 0 8px;
+  border-radius: 2px;
+  transform: rotate(135deg) !important;
+}
+
+.owl-dots button.owl-dot.active {
+  background-color: var(--secendary-color) !important;
+  transform: rotate(135deg) scale(1.2) !important;
+}
+
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.38) !important;
+}
+
+#our_client span {
+    font-size: 70px;    
+    position: relative;
+    top: -5px;
+}
+
+#our_client .owl-nav button:focus {
+    outline: none;
+}
+
+@media screen and (max-width:992px) {
+
+  .owl-carousel .item {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .owl-slider {
+    margin: 0px !important;
+  }
+
+}
+
+/* Our Client Slider End */
 
 
 /* Troubleshooting contact Start */
@@ -304,5 +483,12 @@ Reset Default CSS End
   padding: 6px 14px;
   border-radius: 8px;
   margin-top: 30px;
+  transition: 0.4s;
 }
-/* Troubleshooting contact En */
+
+.troubleshoot_contact_btn:hover {
+  background: var(--bg-color);
+  color: var(--white);
+  
+}
+/* Troubleshooting contact End */

@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/home.css" />
 
+    <!-- OWL  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
 
@@ -183,7 +193,7 @@
               </clipPath>
             </defs>
           </svg>
-          <span>All</span>
+          <span>All Categories</span>
         </div>
         <nav class="menu">
           <button type="button" class="close-menu-btn"></button>
@@ -230,6 +240,21 @@
       </div>
     </section>
     <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero_wrapper">
+          <div class="category_sidebar">
+            <h1>gg</h1>
+          </div>
+          <div class="hero_slider">
+            <h1>f</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero End -->
 
     <!-- Explore Our Services Start -->
     <section id="services" class="services-service-sec pt-5 pb-5">
@@ -341,61 +366,232 @@
           </div>
           <div class="product_card">
             <div class="row">
-              <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-item-stretch">
+              <div class="col-lg-3 col-md-6 d-flex align-item-stretch">
                 <div class="product_card_item">
                   <div class="product_img">
                     <img src="./assets/img/server-product-img1.png" alt="" />
                   </div>
                   <div class="product_card_details">
-                    <h1 class="brand_name">ASUS</h1>
-                    <h2 class="model">ASUS RS520A-E12-RS12U Server</h2>
-                    <div class="rating_star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <div class="current_price">
-                      <h3>$1,939.99</h3>
-                    </div>
-                    <div class="discount_price">
-                      <h4>$1,689.99</h4>
+                    <div class="box_wrapper">
+                      <h1 class="brand_name">ASUS</h1>
+                      <h2 class="model">ASUS RS520A-E12-RS12U Server</h2>
+                      <div class="rating_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="current_price">
+                        <h3>$1,939.99</h3>
+                      </div>
+                      <div class="discount_price">
+                        <h4>$1,689.99</h4>
+                      </div>
                     </div>
                     <button class="product_cart_btn">Add to Cart</button>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-item-stretch">
+              <div class="col-lg-3 col-md-6 d-flex align-item-stretch">
                 <div class="product_card_item">
                   <div class="product_img">
                     <img src="./assets/img/server-product-img2.png" alt="" />
                   </div>
                   <div class="product_card_details">
-                    <h1>The Blanco</h1>
-                    <p>400 Points</p>
+                    <div class="box_wrapper">
+                      <h1 class="brand_name">ASUS</h1>
+                      <h2 class="model">ASUS RS700-E11-RS4U Server</h2>
+                      <div class="rating_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="current_price">
+                        <h3>$2,739.99</h3>
+                      </div>
+                      <div class="discount_price">
+                        <h4>$2,529.99</h4>
+                      </div>
+                    </div>
+                    <button class="product_cart_btn">Add to Cart</button>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-item-stretch">
+              <div class="col-lg-3 col-md-6 d-flex align-item-stretch">
                 <div class="product_card_item">
                   <div class="product_img">
                     <img src="./assets/img/server-product-img3.png" alt="" />
                   </div>
                   <div class="product_card_details">
-                    <h1>The Blanco</h1>
-                    <p>400 Points</p>
+                    <div class="box_wrapper">
+                      <h1 class="brand_name">Cisco</h1>
+                      <h2 class="model">Cisco UCS C240 M6 Rack Server</h2>
+                      <div class="rating_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="current_price">
+                        <h3>$2,172.99</h3>
+                      </div>
+                      <div class="discount_price">
+                        <h4>$1,139.99</h4>
+                      </div>
+                    </div>
+                    <button class="product_cart_btn">Add to Cart</button>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-item-stretch">
+              <div class="col-lg-3 col-md-6 d-flex align-item-stretch">
                 <div class="product_card_item">
                   <div class="product_img">
                     <img src="./assets/img/server-product-img4.png" alt="" />
                   </div>
                   <div class="product_card_details">
-                    <h1>The Blanco</h1>
-                    <p>400 Points</p>
+                    <div class="box_wrapper">
+                      <h1 class="brand_name">DELL</h1>
+                      <h2 class="model">PowerEdge R6515 Rack Server</h2>
+                      <div class="rating_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="current_price">
+                        <h3>$1,884.99</h3>
+                      </div>
+                      <div class="discount_price">
+                        <h4>$1,754.99</h4>
+                      </div>
+                    </div>
+                    <button class="product_cart_btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="product_wrapper">
+          <div class="view_more_wrapper">
+            <h3 class="server">Switch</h3>
+            <button class="view_more_btn">View More</button>
+          </div>
+          <div class="product_card">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 d-flex align-item-stretch">
+                <div class="product_card_item">
+                  <div class="product_img">
+                    <img src="./assets/img/switch-product-img1.png" alt="" />
+                  </div>
+                  <div class="product_card_details">
+                    <div class="box_wrapper">
+                      <h1 class="brand_name">HP</h1>
+                      <h2 class="model">HP Aruba 2930F 24G(JL259A)</h2>
+                      <div class="rating_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="current_price">
+                        <h3>$1,939.99</h3>
+                      </div>
+                      <div class="discount_price">
+                        <h4>$1,689.99</h4>
+                      </div>
+                    </div>
+                    <button class="product_cart_btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 d-flex align-item-stretch">
+                <div class="product_card_item">
+                  <div class="product_img">
+                    <img src="./assets/img/switch-product-img2.png" alt="" />
+                  </div>
+                  <div class="product_card_details">
+                    <div class="box_wrapper">
+                      <h1 class="brand_name">DELL</h1>
+                      <h2 class="model">DELL Networking X1026P</h2>
+                      <div class="rating_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="current_price">
+                        <h3>$724.99</h3>
+                      </div>
+                      <div class="discount_price">
+                        <h4>$515.99</h4>
+                      </div>
+                    </div>
+                    <button class="product_cart_btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 d-flex align-item-stretch">
+                <div class="product_card_item">
+                  <div class="product_img">
+                    <img src="./assets/img/switch-product-img3.png" alt="" />
+                  </div>
+                  <div class="product_card_details">
+                    <div class="box_wrapper">
+                      <h1 class="brand_name">HP</h1>
+                      <h2 class="model">HP Aruba 2530 48GPOE+J9772A</h2>
+                      <div class="rating_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="current_price">
+                        <h3>$1,689.99</h3>
+                      </div>
+                      <div class="discount_price">
+                        <h4>$1,166.99</h4>
+                      </div>
+                    </div>
+                    <button class="product_cart_btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 d-flex align-item-stretch">
+                <div class="product_card_item">
+                  <div class="product_img">
+                    <img src="./assets/img/switch-product-img4.png" alt="" />
+                  </div>
+                  <div class="product_card_details">
+                    <div class="box_wrapper">
+                      <h1 class="brand_name">Cisco</h1>
+                      <h2 class="model">Cisco SF350-24P 24-Port 10/100 POE </h2>
+                      <div class="rating_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="current_price">
+                        <h3>$520.99</h3>
+                      </div>
+                      <div class="discount_price">
+                        <h4>$304.99</h4>
+                      </div>
+                    </div>
+                    <button class="product_cart_btn">Add to Cart</button>
                   </div>
                 </div>
               </div>
@@ -407,6 +603,55 @@
     <!-- Our Products End -->
 
     <!-- Our Client Slider Start -->
+    <section id="our_client">
+      <div class="container">
+        <div class="owl-slider">
+          <div class="owl-slider-heading">
+            <h1>Our Clients</h1>
+          </div>
+          <div id="carousel" class="owl-carousel">
+            <div class="item">
+              <img src="./assets/img/client-logo-img1.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./assets/img/client-logo-img2.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./assets/img/client-logo-img3.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./assets/img/client-logo-img4.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./assets/img/client-logo-img5.png" alt="" />
+            </div>
+
+            <div class="item">
+              <img src="./assets/img/client-logo-img1.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./assets/img/client-logo-img2.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./assets/img/client-logo-img3.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./assets/img/client-logo-img4.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./assets/img/client-logo-img5.png" alt="" />
+            </div>
+
+            <div class="item">
+              <img src="./assets/img/client-logo-img4.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./assets/img/client-logo-img5.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Our Client Slider Start -->
 
     <!-- troubleshooting contact Start -->
@@ -609,14 +854,11 @@
     <!-- Footer End -->
 
     <!-- Scripts js -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/client-slider.js"></script>
   </body>
 </html>

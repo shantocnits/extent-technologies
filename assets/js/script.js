@@ -1,32 +1,33 @@
 // Navbar Start..
 
-const  menu = document.querySelector(".menu");
+const  menuItem = document.querySelector(".menu");
 const  openMenuBtn = document.querySelector(".open-menu-btn");
 const  closeMenuBtn = document.querySelector(".close-menu-btn");
 
 [openMenuBtn, closeMenuBtn].forEach((btn) => {
 btn.addEventListener("click", () => {
-menu.classList.toggle("open");
-menu.style.transition = "transform 0.5s ease";
+menuItem.classList.toggle("open");
+menuItem.style.transition = "transform 0.5s ease";
 });
 });
 
 
-menu.addEventListener("transitionend", function() {
+menuItem.addEventListener("transitionend", function() {
 this.removeAttribute("style");
 });
 
-menu.querySelectorAll(".dropdown > i").forEach((arrow) => {
+menuItem.querySelectorAll(".dropdown > i").forEach((arrow) => {
 arrow.addEventListener("click", function(){
 this.closest(".dropdown").classList.toggle("active");
 });
 });
-// Navbar End..
+
+// Navbar End.. //
 
 
 
 
-
+// Topbar Text Effect Start //
 
 // values to keep track of the number of letters typed, which quote to use. etc. Don't change these values.
 var i = 0,
@@ -40,10 +41,10 @@ var textArray = [
 ];
 
 // Speed (in milliseconds) of typing.
-var speedForward = 100, //Typing Speed
+var speedForward = 20, //Typing Speed
     speedWait = 1000, // Wait between typing and backspacing
     speedBetweenLines = 1000, //Wait between first and second lines
-    speedBackspace = 25; //Backspace Speed
+    speedBackspace = 28; //Backspace Speed
 
 //Run the loop
 typeWriter("output", textArray);
@@ -116,3 +117,6 @@ function typeWriter(id, ar) {
     }
   }
 }
+
+// Topbar Text Effect End //
+

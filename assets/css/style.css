@@ -66,8 +66,13 @@ Reset Default CSS End
 .topbar_item_text {
   color: var(--white);
   font-family: var(--secendary-font);
-  font-size: 16px;
+  font-size: 14px;
   margin: 0px;
+}
+
+.topbar_item_text .contact_nmbr {
+  display: flex;
+  align-items: center;
 }
 
 .topbar_item_text span {
@@ -75,6 +80,8 @@ Reset Default CSS End
 }
 
 .currency_dropdown .currency_btn {
+  display: flex;
+  align-items: center;
   background: none;
   border: 1px solid #ffffff;
   border-radius: 4px;
@@ -83,6 +90,7 @@ Reset Default CSS End
 
 .currency_dropdown .currency_btn i {
   color: var(--white);
+  margin-left: 8px;
 }
 
 .currency_dropdown .dropdown-menu {
@@ -94,10 +102,12 @@ Reset Default CSS End
 }
 
 .output {
+  width: calc(100% - 280px);
   display: flex;
   align-items: center;
-  text-align: center;
-  font-family: "Source Code Pro", monospace;
+  justify-content: center;
+  text-align: center !important;
+  font-family: var(--secendary-font);
   color: white;
 }
 
@@ -105,7 +115,7 @@ Reset Default CSS End
 .cursor {
   font-family: var(--secendary-font);
   margin-bottom: 0px !important;
-  font-size: 1em !important;
+  font-size: 14px;
 }
 .cursor::after {
   content: "";

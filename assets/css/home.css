@@ -463,6 +463,177 @@ Reset Default CSS End
 
 /* Explore Our Services End */
 
+/* Extent Technologies Start */
+
+#technologie {
+  width: 100%;
+}
+
+.technologie-wrapper {
+  margin: 0px 12px;
+}
+
+.technologie-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.fcMedBlue {
+  color: #000000;
+}
+
+/*= timeline css for data in one side =*/
+.timeline {
+  float: left;
+  width: 90%;
+  margin: 40px 5%;
+  padding-left: 40px;
+  position: relative;
+  border-left: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.timeline:before,
+.timeline:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  position: absolute;
+  left: -11px;
+  border-radius: 50%;
+}
+.timeline:before {
+  top: -18px;
+}
+.timeline:after {
+  bottom: -18px;
+}
+.timeline li {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: left;
+  margin-top: 20px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+.timeline li:first-child {
+  margin-top: 0;
+}
+.timeline li:before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #eee;
+  position: absolute;
+  top: 50%;
+  left: -41px;
+}
+.timeline li:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  left: -45px;
+}
+.timeline-description p {
+  margin-top: 15px;
+}
+.timeline-description p:first-child {
+  margin-top: 0;
+}
+/*= ttimeline css for data in one side end =*/
+
+/*= timeline css for data in both side =*/
+.timeline-both-side {
+  float: left;
+  width: 96%;
+  margin: 20px 2% 50px;
+  position: relative;
+  box-sizing: border-box;
+}
+.timeline-both-side:before {
+  background-color: #ccc;
+  bottom: 0;
+  content: " ";
+  left: 50%;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+.timeline-both-side:after {
+  border-radius: 50%;
+  bottom: -22px;
+  content: "";
+  height: 18px;
+  left: 50%;
+  margin-left: -11px;
+  position: absolute;
+  width: 18px;
+  border: 2px solid #ccc;
+}
+.timeline-both-side li {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.timeline-both-side li .border-line {
+  background-color: #ccc;
+  font-size: 1.4em;
+  height: 1px;
+  left: 50%;
+  margin-left: -8%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 8%;
+  z-index: 100;
+}
+.timeline-both-side li.opposite-side .border-line {
+  left: auto;
+  right: 50%;
+  margin-left: 0;
+  margin-right: -8%;
+}
+.timeline-both-side li .border-line:before {
+  background-color: #ccc;
+  content: "";
+  height: 7px;
+  position: absolute;
+  right: -4px;
+  top: -3px;
+  width: 7px;
+}
+.timeline-both-side li.opposite-side .border-line:before {
+  left: -4px;
+  right: auto;
+}
+.timeline-both-side li .timeline-description {
+  border-radius: 2px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  float: left;
+  font-size: 13px;
+  padding: 10px;
+  position: relative;
+  width: 42%;
+}
+.timeline-both-side li.opposite-side .timeline-description {
+  float: right;
+}
+/*= timeline css for data in both side end =*/
+/* device-screen */
+@media only screen and (max-width: 960px) {
+  .hide-on-device {
+    display: none;
+  }
+}
+/* Extent Technologies End */
+
 /* Our Products Start */
 #our_product {
   padding: 48px 0;

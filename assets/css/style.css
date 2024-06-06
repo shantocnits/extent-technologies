@@ -635,21 +635,24 @@ p.cursor::after {
     display: none;
   }
 
-  .navbar .menu .sub-menu .fa-chevron-down {
-    color: var(--white) !important;
-  }
-
   .navbar .menu .dropdown.active > .sub-menu {
     display: block;
   }
 
+  .navbar .menu .sub-menu .fa-chevron-down {
+    color: var(--white) !important;
+  }
+ 
   .navbar .menu ul li:hover i {
     color: var(--white) !important;
     transform: rotate(0deg);
   }
 
+  .navbar .menu .dropdown > i {
+    transition: 0.4s;
+  }
+
   .navbar .menu .dropdown.active > i {
-    background-color: var(--bg-color);
     transform: rotate(180deg);
     color: var(--secendary-color) !important;
   }
@@ -767,6 +770,18 @@ p.cursor::after {
   border-top: 1px solid var(--strock-color);
 }
 
+.menu-item .contente-ditable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .menu-link {
   font-family: inherit;
   font-size: 1rem;
@@ -775,12 +790,15 @@ p.cursor::after {
   text-transform: uppercase;
   transition: color 0.35s ease-out;
 }
+
 .menu-link:hover {
   color: var(--secendary-color);
 }
+
 .menu-item {
   position: relative;
 }
+
 .menu-item a {
   font-family: var(--secendary-font);
   font-size: 1rem;
@@ -790,9 +808,11 @@ p.cursor::after {
   color: var(--white);
   transition: color 0.35s ease-out;
 }
+
 .menu-item a:hover {
   color: var(--secendary-color);
 }
+
 .menu-item.has-collapsible {
   position: relative;
 }
@@ -815,48 +835,94 @@ p.cursor::after {
   font-weight: 500;
   color: var(--white);
   padding-left: 20px;
+  padding-right: 18px;
   transition: color 0.35s ease-out;
 }
 .menu-item.has-collapsible .menu-child .menu-child-item2 a {
   display: flex;
   align-items: flex-start;
   font-family: var(--secendary-font) !important;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--white);
   padding-left: 30px !important;
   transition: color 0.35s ease-out;
 }
+
 .menu-item.has-collapsible .menu-child .menu-child-item1 a:hover,
 .menu-item.has-collapsible .menu-child .menu-child-item2 a:hover {
   color: var(--secendary-color);
 }
 
-.menu-item.active .menu-child-item1 {
+.menu-item.has-collapsible .menu-child .menu-child-item1 a:hover i,
+.menu-item.has-collapsible .menu-child .menu-child-item2 a:hover i {
+  color: var(--secendary-color) !important;
+}
+
+.menu-item .menu-child-item1 {
   padding-left: 10px;
 }
 
-.menu-item .menu-child-item1 .fa-chevron-down {
-  color: var(--white) !important;
+.menu-item.active .menu-child-item1 span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.menu-item.active .menu-child-item1 i {
-  color: var(--white);
+.menu-item .menu-child-item1 i {
+  font-size: 12px;
+}
+
+.menu-item .menu-child-item1 .fa-circle {
   font-size: 8px;
-  margin-right: 4px;
-  margin-top: 6px;
 }
 
-.menu-item.active .menu-child-item2 i {
-  color: var(--white);
-  font-size: 6px;
-  margin-right: 4px;
-  margin-top: 6px;
+.menu-child-item1 i {
+  color: var(--white) !important;
+  transition: 0.4s;
 }
 
-/* .menu-item.active.has-collapsible span::after {
-  transform: rotate(90deg);
-} */
+.menu-item .contente-ditable i {
+  transition: 0.4s;
+}
+
+.menu-item.active .contente-ditable i {
+  color: var(--secendary-color) !important;
+  transform: rotate(180deg);
+}
+
+.menu-item.active .contente-ditable span {
+  color: var(--secendary-color) !important;
+}
+
+.menu-child-item1 .contente-ditable2 i {
+  transition: 0.4s;
+}
+
+.menu-child-item1.active .contente-ditable2 i {
+  color: var(--secendary-color) !important;
+  transform: rotate(180deg);
+}
+
+.menu-child-item1.active .contente-ditable2 span {
+  color: var(--secendary-color) !important;
+}
+
+.menu-child-item2:hover i {
+  color: var(--secendary-color) !important;
+}
+
+.menu-item .menu-child-item2 a {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secendary-color);
+}
+
+.menu-item .menu-child-item2 i {
+  padding-top: 6px;
+}
 
 @media screen and (min-width: 992px) {
   .menu-wrapper.show .menu-mobile {

@@ -422,7 +422,6 @@ p.cursor::after {
   transform: none;
   visibility: visible;
   transition: all 0.7s ease;
-  border-radius: 12px;
 }
 .navbar .menu li:hover > .sub-menu .sub-menu-wrapper {
   margin-top: 26px;
@@ -625,6 +624,28 @@ p.cursor::after {
 
   .navbar .menu .sub-menu {
     position: static;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.7s ease, transform 0.8s ease, max-height 0.9s ease,
+      visibility 0s;
+    box-shadow: none;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar .menu .dropdown.active > .sub-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    max-height: 500px;
+    transition: opacity 1s ease, transform 1s ease, max-height 1s ease,
+      visibility 0s;
+  }
+
+  /* .navbar .menu .sub-menu {
+    position: static;
     opacity: 1;
     transform: none;
     visibility: visible;
@@ -637,12 +658,12 @@ p.cursor::after {
 
   .navbar .menu .dropdown.active > .sub-menu {
     display: block;
-  }
+  } */
 
   .navbar .menu .sub-menu .fa-chevron-down {
     color: var(--white) !important;
   }
- 
+
   .navbar .menu ul li:hover i {
     color: var(--white) !important;
     transform: rotate(0deg);
@@ -669,7 +690,7 @@ p.cursor::after {
     padding-left: 30px;
   }
 
-  .navbar .menu .sub-menu .sub-menu .sub-menu a {
+  .navbar .menu .sub-menu a {
     padding-left: 45px;
   }
 
